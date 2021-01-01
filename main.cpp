@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include "readMatrix.hpp"
-#include "findDeterminant.hpp"
+#include "./readMatrix.hpp"
+#include "./findDeterminant.hpp"
 
 int main(){
 	std::string matrixSizeIn= " ";
