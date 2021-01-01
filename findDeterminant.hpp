@@ -7,6 +7,6 @@
 #ifndef FINDDETERMINANT_HPP
 #define FINDDETERMINANT_HPP
 
-double determinant(double** arrIn, int matrixSize);
+int determinant(int** arrIn, int matrixSize);
 
 #endif

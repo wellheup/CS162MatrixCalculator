@@ -4,6 +4,7 @@
 #include "./findDeterminant.hpp"
 
 int main(){
+  //get initial input
 	std::string matrixSizeIn= " ";
 	bool validMatrix = false;
 	int matrixSize= 0;
@@ -26,9 +27,13 @@ int main(){
 		}
 	}
 	//creat a new matrix array
-	double** matrix = new double*[matrixSize];
-	for(int i=0; i<matrixSize; i++){
-		matrix[i]= new double[matrixSize];
+	int** matrix = new int*[matrixSize];
+  for(int i=0; i<matrixSize; i++){
+    
+		matrix[i]= new int[matrixSize];
+    for(int j=0; j<matrixSize; j++){
+      matrix[i][j] = 0.0; 
+    }
 	}
 	readMatrix(matrix, matrixSize);
 

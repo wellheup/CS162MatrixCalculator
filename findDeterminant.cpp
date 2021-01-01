@@ -8,16 +8,16 @@
 /********************************************************************* 
 ** Description: determinant() receives a  pointer to a 2D array 
 ** containing a 2x2 or 3x3 matrix and returns the determinant of that
-** matrix as a double value
+** matrix as a int value
 *********************************************************************/ 
-double determinant(double** arrIn, int matrixSize){
+int determinant(int** arrIn, int matrixSize){
 	if(matrixSize== 2){
-		double determinant= (arrIn[0][0]*arrIn[1][1])-(arrIn[1][0]*arrIn[0][1]);
+		int determinant= (arrIn[0][0]*arrIn[1][1])-(arrIn[1][0]*arrIn[0][1]);
 		return determinant;
 	}
 	else if(matrixSize== 3){
-		double determinant= 0;
-		double a=arrIn[0][0], 
+		int determinant= 0;
+		int a=arrIn[0][0], 
 		b= arrIn[0][1],
 		c= arrIn[0][2],
 		d= arrIn[1][0],
@@ -30,6 +30,6 @@ double determinant(double** arrIn, int matrixSize){
 		return determinant;
 	}
 	else{
-		return -666.999;
+		return -666;
 	}
 }

@@ -7,7 +7,7 @@
 #ifndef READMATRIX_HPP
 #define READMATRIX_HPP
 
-void readMatrix(double** arrIn, int matrixSize);
+void readMatrix(int** arrIn, int matrixSize);
 
 bool isInt(std::string num);
 

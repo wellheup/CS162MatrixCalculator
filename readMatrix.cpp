@@ -14,20 +14,20 @@
 ** asks the user to fill it out and prints the array as it stands
 ** after each entry
 *********************************************************************/ 
-void readMatrix(double** arrIn, int matrixSize){
+void readMatrix(int** arrIn, int matrixSize){
 	for(int i= 0; i< matrixSize; i++){
 		for(int j= 0; j<matrixSize; j++){
 			bool validEntry= false;
 			std::string entryTxt;				
 			while(validEntry== false){
-				std::cout<< "Please enter a double matrix value for "<< i<< ", "<< j<< ": ";
+				std::cout<< "Please enter an int matrix value for "<< i<< ", "<< j<< ": ";
 				std::getline(std::cin, entryTxt);
-				if(isDouble(entryTxt)){
+				if(isInt(entryTxt)){
 					validEntry= true;
 				}
 			}
 			
-	  double entryNum= stod(entryTxt);
+	  int entryNum= stod(entryTxt);
 	  arrIn[i][j]= entryNum;
 
 	  // print out the grid and left side increments
@@ -71,7 +71,7 @@ bool isInt(std::string num){
 }
 
 /********************************************************************* 
-** Description: isInt() verifies that a string entry from the user
+** Description: isDouble() verifies that a string entry from the user
 ** is a bool value
 *********************************************************************/ 
 bool isDouble(std::string num){
